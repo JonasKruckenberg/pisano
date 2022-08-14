@@ -17,6 +17,6 @@ I made this while I was supposed to work on a talk. **This is a procrastination 
 
 [MIT © Jonas Kruckenberg.](./LICENSE)
 
-[Sponsor me on GitHub]: https://github.com/sponsors/JonasKruckenberg
+[GitHub sponsor]: https://github.com/sponsors/JonasKruckenberg
 [Pisano periods]: https://en.wikipedia.org/wiki/Pisano_period
 [Fibonacci numbers]: https://en.wikipedia.org/wiki/Fibonacci_number
