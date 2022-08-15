@@ -39,7 +39,7 @@ pub struct Plot {
     #[serde(default = "default_rotation")]
     pub rotation: f32,
     #[serde(default = "default_bounding_circle")]
-    pub with_bunding_circle: bool,
+    pub with_bounding_circle: bool,
     #[serde(default = "default_stroke")]
     pub stroke: String,
 }
@@ -93,7 +93,7 @@ impl Plot {
             );
         }
 
-        if with_bunding_circle {
+        if with_bounding_circle {
             document = document.add(
                 Circle::new()
                     .set("cx", radius + padding)
@@ -133,7 +133,7 @@ impl TryFrom<Url> for Plot {
             .map(|v| v.parse())
             .unwrap_or_else(|| Ok(default_rotation()))?;
 
-        let with_bunding_circle: bool = parameters
+        let with_bounding_circle: bool = parameters
             .get("with-bounding-circle")
             .map(|v| v.parse())
             .unwrap_or_else(|| Ok(default_bounding_circle()))?;
@@ -152,7 +152,7 @@ impl TryFrom<Url> for Plot {
             radius,
             padding,
             rotation,
-            with_bunding_circle,
+            with_bounding_circle,
             stroke,
         })
     }
