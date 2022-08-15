@@ -6,6 +6,7 @@
 mod circle_plot;
 pub mod sequences;
 
+use tauri::{WindowBuilder, TitleBarStyle};
 use url::Url;
 
 #[tauri::command]
@@ -19,6 +20,17 @@ fn save_plot(plot: circle_plot::Plot) {
 fn main() {
     tauri::Builder::default()
         .invoke_handler(tauri::generate_handler![save_plot])
+        .setup(|app| {
+            WindowBuilder::new(app, "label", tauri::WindowUrl::App("index.html".into()))
+                .inner_size(1200.0, 800.0)
+                .visible(false)
+                .title("")
+                .hidden_title(true)
+                .title_bar_style(TitleBarStyle::Overlay)
+                .build()?;
+
+            Ok(())
+        })
         .register_uri_scheme_protocol("circleplot", |_app, req| {
             let url: Url = req.uri().parse().unwrap();
 

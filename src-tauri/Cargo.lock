@@ -60,6 +60,7 @@ dependencies = [
  "percent-encoding",
  "serde",
  "serde_json",
+ "serde_repr",
  "svg",
  "tauri",
  "tauri-build",
@@ -2424,9 +2425,8 @@ dependencies = [
 
 [[package]]
 name = "tauri"
-version = "1.0.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e1a56a8b125069c2682bd31610109b4436c050c74447bee1078217a0325c1add"
+version = "1.0.3"
+source = "git+https://github.com/tauri-apps/tauri?branch=macos-transparent-titlebar#5c2072610dcbdd33436b19c186240ea8105d123e"
 dependencies = [
  "anyhow",
  "cocoa",
@@ -2456,7 +2456,7 @@ dependencies = [
  "tauri-macros",
  "tauri-runtime",
  "tauri-runtime-wry",
- "tauri-utils",
+ "tauri-utils 1.0.3 (git+https://github.com/tauri-apps/tauri?branch=macos-transparent-titlebar)",
  "tempfile",
  "thiserror",
  "tokio",
@@ -2479,15 +2479,14 @@ dependencies = [
  "json-patch",
  "semver 1.0.13",
  "serde_json",
- "tauri-utils",
+ "tauri-utils 1.0.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "winres",
 ]
 
 [[package]]
 name = "tauri-codegen"
-version = "1.0.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "16d62a3c8790d6cba686cea6e3f7f569d12c662c3274c2d165a4fd33e3871b72"
+version = "1.0.3"
+source = "git+https://github.com/tauri-apps/tauri?branch=macos-transparent-titlebar#5c2072610dcbdd33436b19c186240ea8105d123e"
 dependencies = [
  "base64",
  "brotli",
@@ -2501,7 +2500,7 @@ dependencies = [
  "serde",
  "serde_json",
  "sha2",
- "tauri-utils",
+ "tauri-utils 1.0.3 (git+https://github.com/tauri-apps/tauri?branch=macos-transparent-titlebar)",
  "thiserror",
  "time",
  "uuid 1.1.2",
@@ -2510,23 +2509,21 @@ dependencies = [
 
 [[package]]
 name = "tauri-macros"
-version = "1.0.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7296fa17996629f43081e1c66d554703900187ed900c5bf46f97f0bcfb069278"
+version = "1.0.3"
+source = "git+https://github.com/tauri-apps/tauri?branch=macos-transparent-titlebar#5c2072610dcbdd33436b19c186240ea8105d123e"
 dependencies = [
  "heck 0.4.0",
  "proc-macro2",
  "quote",
  "syn",
  "tauri-codegen",
- "tauri-utils",
+ "tauri-utils 1.0.3 (git+https://github.com/tauri-apps/tauri?branch=macos-transparent-titlebar)",
 ]
 
 [[package]]
 name = "tauri-runtime"
 version = "0.10.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4e4cff3b4d9469727fa2107c4b3d2eda110df1ba45103fb420178e536362fae4"
+source = "git+https://github.com/tauri-apps/tauri?branch=macos-transparent-titlebar#5c2072610dcbdd33436b19c186240ea8105d123e"
 dependencies = [
  "gtk",
  "http",
@@ -2535,7 +2532,7 @@ dependencies = [
  "raw-window-handle",
  "serde",
  "serde_json",
- "tauri-utils",
+ "tauri-utils 1.0.3 (git+https://github.com/tauri-apps/tauri?branch=macos-transparent-titlebar)",
  "thiserror",
  "uuid 1.1.2",
  "webview2-com",
@@ -2545,8 +2542,7 @@ dependencies = [
 [[package]]
 name = "tauri-runtime-wry"
 version = "0.10.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3fa8c4edaf01d8b556e7172c844b1b4dd3399adcd1a606bd520fc3e65f698546"
+source = "git+https://github.com/tauri-apps/tauri?branch=macos-transparent-titlebar#5c2072610dcbdd33436b19c186240ea8105d123e"
 dependencies = [
  "cocoa",
  "gtk",
@@ -2554,7 +2550,7 @@ dependencies = [
  "rand 0.8.5",
  "raw-window-handle",
  "tauri-runtime",
- "tauri-utils",
+ "tauri-utils 1.0.3 (git+https://github.com/tauri-apps/tauri?branch=macos-transparent-titlebar)",
  "uuid 1.1.2",
  "webkit2gtk",
  "webview2-com",
@@ -2567,6 +2563,31 @@ name = "tauri-utils"
 version = "1.0.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "12ff4b68d9faeb57c9c727bf58c9c9768d2b67d8e84e62ce6146e7859a2e9c6b"
+dependencies = [
+ "ctor",
+ "glob",
+ "heck 0.4.0",
+ "html5ever",
+ "json-patch",
+ "kuchiki",
+ "memchr",
+ "phf 0.10.1",
+ "proc-macro2",
+ "quote",
+ "semver 1.0.13",
+ "serde",
+ "serde_json",
+ "serde_with",
+ "thiserror",
+ "url",
+ "walkdir",
+ "windows 0.37.0",
+]
+
+[[package]]
+name = "tauri-utils"
+version = "1.0.3"
+source = "git+https://github.com/tauri-apps/tauri?branch=macos-transparent-titlebar#5c2072610dcbdd33436b19c186240ea8105d123e"
 dependencies = [
  "brotli",
  "ctor",

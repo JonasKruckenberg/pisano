@@ -16,7 +16,10 @@
       "all": false,
       "window": {
         "all": false,
-        "show": true
+        "show": true,
+        "startDragging": true,
+        "maximize": true,
+        "unmaximize": true
       }
     },
     "bundle": {
@@ -59,14 +62,6 @@
       "active": false
     },
     "windows": [
-      {
-        "fullscreen": false,
-        "height": 600,
-        "resizable": true,
-        "title": "Pisano v0.1.0",
-        "width": 1200,
-        "visible": false
-      }
     ]
   }
 }
