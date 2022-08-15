@@ -121,22 +121,22 @@ impl TryFrom<Url> for Plot {
         let radius: f32 = parameters
             .get("radius")
             .map(|v| v.parse())
-            .unwrap_or(Ok(default_radius()))?;
+            .unwrap_or_else (|| Ok(default_radius()))?;
 
         let padding: f32 = parameters
             .get("padding")
             .map(|v| v.parse())
-            .unwrap_or(Ok(default_padding()))?;
+            .unwrap_or_else(|| Ok(default_padding()))?;
 
         let rotation: f32 = parameters
             .get("rotation")
             .map(|v| v.parse())
-            .unwrap_or(Ok(default_rotation()))?;
+            .unwrap_or_else(|| Ok(default_rotation()))?;
 
         let with_bunding_circle: bool = parameters
             .get("with-bounding-circle")
             .map(|v| v.parse())
-            .unwrap_or(Ok(default_bounding_circle()))?;
+            .unwrap_or_else(|| Ok(default_bounding_circle()))?;
 
         let stroke: String = parameters
             .get("stroke")
@@ -145,7 +145,7 @@ impl TryFrom<Url> for Plot {
                     .decode_utf8_lossy()
                     .to_string()
             })
-            .unwrap_or(default_stroke());
+            .unwrap_or_else(default_stroke);
 
         Ok(Self {
             modulus,
