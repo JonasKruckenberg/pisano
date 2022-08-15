@@ -16,8 +16,12 @@ fn default_padding() -> f32 {
 fn default_rotation() -> f32 {
     std::f32::consts::PI / 2.0
 }
-fn default_bounding_circle() -> bool { true }
-
+fn default_bounding_circle() -> bool {
+    true
+}
+fn default_stroke() -> String {
+    "black".to_string()
+}
 
 #[derive(Debug, Clone)]
 struct Point {
@@ -36,6 +40,8 @@ pub struct Plot {
     pub rotation: f32,
     #[serde(default = "default_bounding_circle")]
     pub with_bunding_circle: bool,
+    #[serde(default = "default_stroke")]
+    pub stroke: String,
 }
 
 impl Plot {
@@ -46,6 +52,7 @@ impl Plot {
             modulus,
             rotation,
             with_bunding_circle,
+            stroke,
         } = self;
 
         let mut document = Document::new().set(
@@ -82,7 +89,7 @@ impl Plot {
                     .set("y1", from.y + radius + padding)
                     .set("x2", to.x + radius + padding)
                     .set("y2", to.y + radius + padding)
-                    .set("stroke", "black"),
+                    .set("stroke", stroke.clone()),
             );
         }
 
@@ -93,7 +100,7 @@ impl Plot {
                     .set("cy", radius + padding)
                     .set("r", radius)
                     .set("fill", "none")
-                    .set("stroke", "black")
+                    .set("stroke", stroke)
                     .set("stroke-width", 1.5),
             );
         }
@@ -131,12 +138,18 @@ impl TryFrom<Url> for Plot {
             .map(|v| v.parse())
             .unwrap_or(Ok(default_bounding_circle()))?;
 
+        let stroke: String = parameters
+            .get("stroke")
+            .map(|str| percent_encoding::percent_decode(str.as_bytes()).decode_utf8_lossy().to_string())
+            .unwrap_or(default_stroke());
+
         Ok(Self {
             modulus,
             radius,
             padding,
             rotation,
             with_bunding_circle,
+            stroke,
         })
     }
 }

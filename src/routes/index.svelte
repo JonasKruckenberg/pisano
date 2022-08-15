@@ -1,6 +1,27 @@
 <script lang="ts">
+import { browser } from '$app/env';
+
 	import Intersector from '$lib/Intersector.svelte';
+import { onMount } from 'svelte';
+
 	const moduli = [...Array(500).keys()];
+
+    const updateStroke = () => stroke = getComputedStyle(document.documentElement).color
+
+    let stroke: string
+    
+    // updateStroke() only works in a DOM env, so we have to dispatch it initially behind this guard
+    if(browser) {
+        updateStroke()
+    }
+
+    onMount(() => {
+        const lightMode = matchMedia('(prefers-color-scheme: light)')
+
+        lightMode.addEventListener("change", updateStroke)
+
+        return () => lightMode.removeEventListener("change", updateStroke);
+    })
 </script>
 
 <section class="circles">

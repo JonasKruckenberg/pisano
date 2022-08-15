@@ -57,6 +57,7 @@ checksum = "508b352bb5c066aac251f6daf6b36eccd03e8a88e8081cd44959ea277a3af9a8"
 name = "app"
 version = "0.1.0"
 dependencies = [
+ "percent-encoding",
  "serde",
  "serde_json",
  "svg",
