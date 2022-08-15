@@ -62,7 +62,7 @@ impl Plot {
             (
                 0,
                 0,
-                radius * 2.0 + padding + 2.0,
+                radius * 2.0 + padding * 2.0,
                 radius * 2.0 + padding * 2.0,
             ),
         );
