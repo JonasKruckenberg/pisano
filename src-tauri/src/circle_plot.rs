@@ -1,4 +1,4 @@
-use crate::sequences::FIBONACCI;
+use crate::sequences::Sequence;
 use serde::Deserialize;
 use std::collections::HashMap;
 use svg::{
@@ -31,7 +31,8 @@ struct Point {
 
 #[derive(Debug, Deserialize)]
 pub struct Plot {
-    pub modulus: usize,
+    pub sequence: Sequence,
+    pub modulus: u128,
     #[serde(default = "default_radius")]
     pub radius: f32,
     #[serde(default = "default_padding")]
@@ -51,8 +52,9 @@ impl Plot {
             padding,
             modulus,
             rotation,
-            with_bunding_circle,
+            with_bounding_circle,
             stroke,
+            sequence,
         } = self;
 
         let mut document = Document::new().set(
@@ -77,11 +79,13 @@ impl Plot {
             })
             .collect();
 
-        let sequence = &FIBONACCI;
+        let sequence = sequence.get_numbers();
 
         for (i, element) in sequence.iter().map(|i| i % modulus).enumerate() {
+            let element = element as usize;
+            let next_element = sequence[(i + 1) % sequence.len()] as usize;
             let from = &points[element];
-            let to = &points[sequence[(i + 1) % sequence.len()] % points.len()];
+            let to = &points[next_element % points.len()];
 
             document = document.add(
                 Line::new()
@@ -116,12 +120,18 @@ impl TryFrom<Url> for Plot {
         let parameters: HashMap<String, String> =
             HashMap::from_iter(value.query_pairs().into_owned());
 
-        let modulus: usize = parameters.get("modulus").unwrap().parse()?;
+        let modulus: u128 = parameters.get("modulus").unwrap().parse()?;
+
+        let sequence_name: Sequence = parameters
+            .get("sequence")
+            .map(|v| serde_json::from_str(&v))
+            .unwrap()
+            .unwrap();
 
         let radius: f32 = parameters
             .get("radius")
             .map(|v| v.parse())
-            .unwrap_or_else (|| Ok(default_radius()))?;
+            .unwrap_or_else(|| Ok(default_radius()))?;
 
         let padding: f32 = parameters
             .get("padding")
@@ -154,6 +164,7 @@ impl TryFrom<Url> for Plot {
             rotation,
             with_bounding_circle,
             stroke,
+            sequence: sequence_name,
         })
     }
 }
