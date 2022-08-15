@@ -140,7 +140,11 @@ impl TryFrom<Url> for Plot {
 
         let stroke: String = parameters
             .get("stroke")
-            .map(|str| percent_encoding::percent_decode(str.as_bytes()).decode_utf8_lossy().to_string())
+            .map(|str| {
+                percent_encoding::percent_decode(str.as_bytes())
+                    .decode_utf8_lossy()
+                    .to_string()
+            })
             .unwrap_or(default_stroke());
 
         Ok(Self {

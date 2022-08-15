@@ -1,6 +1,6 @@
 # pisano
 
-Pisano lets you explore different visualizations of [Pisano periods], repeating integer sequences closes related to [Fibonacci numbers]. 
+Pisano lets you explore different visualizations of [Pisano periods], repeating integer sequences closes related to [Fibonacci numbers].
 
 ![Screenshot of the app, showing a grid of circular pisano period visualizations](./Screenshot-light.png#gh-light-mode-only)
 ![Screenshot of the app, showing a grid of circular pisano period visualizations](./Screenshot-dark.png#gh-dark-mode-only)
@@ -17,6 +17,6 @@ I made this while I was supposed to work on a talk. **This is a procrastination 
 
 [MIT © Jonas Kruckenberg.](./LICENSE)
 
-[GitHub sponsor]: https://github.com/sponsors/JonasKruckenberg
-[Pisano periods]: https://en.wikipedia.org/wiki/Pisano_period
-[Fibonacci numbers]: https://en.wikipedia.org/wiki/Fibonacci_number
+[github sponsor]: https://github.com/sponsors/JonasKruckenberg
+[pisano periods]: https://en.wikipedia.org/wiki/Pisano_period
+[fibonacci numbers]: https://en.wikipedia.org/wiki/Fibonacci_number
