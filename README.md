@@ -7,7 +7,7 @@ Pisano lets you explore different visualizations of [Pisano periods], repeating 
 
 ## Sponsoring
 
-Are you enjoying these fun little projects? Become a [GitHub sponsor] to help me keep going with this!
+Are you enjoying these fun little projects? Become a [GitHub sponsor] to help me keep going!
 
 ## Disclaimer
 
