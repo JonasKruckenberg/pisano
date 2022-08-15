@@ -1,10 +1,11 @@
 <script lang="ts">
 	import { browser } from '$app/env';
-
 	import Intersector from '$lib/Intersector.svelte';
 	import { onMount } from 'svelte';
+	import { withBoundingCircle } from '../stores/with-bounding-circle';
+	import { sequence } from '../stores/sequence';
 
-	const moduli = [...Array(500).keys()];
+	const moduli = [...Array(100).keys()];
 
 	const updateStroke = () => (stroke = getComputedStyle(document.documentElement).color);
 
@@ -31,7 +32,9 @@
 				<div class="circle">
 					{modulus + 1}
 					<img
-						src={`circleplot://localhost?modulus=${modulus + 1}&stroke=${stroke}`}
+						src={`circleplot://localhost?sequence=${$sequence}&modulus=${
+							modulus + 1
+						}&stroke=${stroke}&with-bounding-circle=${$withBoundingCircle}`}
 						alt={`Circle plot for the Pisano period with modulus ${modulus}`}
 					/>
 				</div>
@@ -41,11 +44,20 @@
 </section>
 
 <style>
-	.circles {
-		width: 85vw;
+	section {
+		--padding-top: 62px;
+		--padding-bottom: 3em;
+
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-		gap: 3.5rem;
+		grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+		gap: 7rem;
+
+		height: calc(100vh - var(--padding-top) - var(--padding-bottom));
+		overflow-y: scroll;
+		scroll-behavior: smooth;
+		padding: 0 3em;
+		padding-top: var(--padding-top);
+		padding-bottom: var(--padding-bottom);
 	}
 
 	.circle {
