@@ -1,3 +1,14 @@
+<script lang="ts">
+	import '../global.css';
+	import { browser } from '$app/env';
+
+	if (browser) {
+		import('@tauri-apps/api/window').then(({ getCurrent }) => {
+			const win = getCurrent();
+			win.show();
+		});
+	}
+</script>
 
 <main>
 	<slot />

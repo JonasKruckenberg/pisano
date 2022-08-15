@@ -13,7 +13,11 @@
   },
   "tauri": {
     "allowlist": {
-      "all": false
+      "all": false,
+      "window": {
+        "all": false,
+        "show": true
+      }
     },
     "bundle": {
       "active": true,
@@ -60,7 +64,8 @@
         "height": 600,
         "resizable": true,
         "title": "Pisano v0.1.0",
-        "width": 1200
+        "width": 1200,
+        "visible": false
       }
     ]
   }
