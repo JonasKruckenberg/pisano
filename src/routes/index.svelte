@@ -1,8 +1,12 @@
 <script lang="ts">
+	import Intersector from '$lib/Intersector.svelte';
 	const moduli = [...Array(500).keys()];
 </script>
+
 <section class="circles">
 	{#each moduli as modulus}
+		<Intersector once={true} let:intersecting>
+			{#if intersecting}
 				<div class="circle">
 					{modulus + 1}
 					<img
@@ -10,6 +14,8 @@
 						alt={`Circle plot for the Pisano period with modulus ${modulus}`}
 					/>
 				</div>
+			{/if}
+		</Intersector>
 	{/each}
 </section>
 
