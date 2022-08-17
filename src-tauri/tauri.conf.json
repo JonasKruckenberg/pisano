@@ -56,7 +56,12 @@
       }
     },
     "security": {
-      "csp": "'none'"
+      "csp": {
+        "default-src": "'none'",
+        "style-src": "'self'",
+        "img-src": "circleplot:"
+      },
+      "freezePrototype": true
     },
     "updater": {
       "active": false
