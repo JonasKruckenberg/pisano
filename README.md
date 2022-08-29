@@ -32,7 +32,7 @@ I made this while I was supposed to work on a talk. **This is a procrastination 
 
 ## Contributing
 
-This project uses [pnpm] as its package manager and [sveltekit] as its frontend framework. 
+This project uses [pnpm] as its package manager and [sveltekit] as its frontend framework.
 
 ### Developing
 
