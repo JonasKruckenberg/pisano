@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { browser } from '$app/env';
+	import { browser } from '$app/environment';
 	import Intersector from '$lib/Intersector.svelte';
 	import { onMount } from 'svelte';
 	import { withBoundingCircle } from '../stores/with-bounding-circle';
