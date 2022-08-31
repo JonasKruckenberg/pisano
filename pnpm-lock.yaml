@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@sveltejs/adapter-auto': next
-  '@sveltejs/adapter-static': 1.0.0-next.39
+  '@sveltejs/adapter-static': 1.0.0-next.40
   '@sveltejs/kit': 1.0.0-next.454
   '@tauri-apps/api': 1.0.2
   '@tauri-apps/cli': 1.0.5
@@ -24,8 +24,8 @@ dependencies:
   '@tauri-apps/api': 1.0.2
 
 devDependencies:
-  '@sveltejs/adapter-auto': 1.0.0-next.69
-  '@sveltejs/adapter-static': 1.0.0-next.39
+  '@sveltejs/adapter-auto': 1.0.0-next.70
+  '@sveltejs/adapter-static': 1.0.0-next.40
   '@sveltejs/kit': 1.0.0-next.454_fhgkwirxvgjw2igda6zmhiisma
   '@tauri-apps/cli': 1.0.5
   '@typescript-eslint/eslint-plugin': 5.36.0_3g5q5capxpyhialyvs33l4nssm
@@ -169,12 +169,12 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@sveltejs/adapter-auto/1.0.0-next.69:
-    resolution: {integrity: sha512-DSrcYgrJ1YFnxJecTiktV4A01B2Avn5t6HvO49YJiGp2mdSxCxJbvqn6I4tPB1T64AInBLFUMmKBK9o9ZJbBMA==}
+  /@sveltejs/adapter-auto/1.0.0-next.70:
+    resolution: {integrity: sha512-FJlDO6oUqbuFJjQoguGb4gdBj3iCSM3evFXkBpQ7hvwu3y2gKbcdzsxdn9tZ5LzkHh79CeJcwiszXFQ8usKk/A==}
     dependencies:
       '@sveltejs/adapter-cloudflare': 1.0.0-next.32
       '@sveltejs/adapter-netlify': 1.0.0-next.75
-      '@sveltejs/adapter-vercel': 1.0.0-next.71
+      '@sveltejs/adapter-vercel': 1.0.0-next.72
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -197,12 +197,12 @@ packages:
       tiny-glob: 0.2.9
     dev: true
 
-  /@sveltejs/adapter-static/1.0.0-next.39:
-    resolution: {integrity: sha512-EeD39H6iEe0UEKnKxLFTZFZpi/FcX5xfbAvsMQ+B09aDZccpQmkJBSIo+4kq1JsQGSjwi/+J3aE9bR67R6CIyQ==}
+  /@sveltejs/adapter-static/1.0.0-next.40:
+    resolution: {integrity: sha512-Yli+dNa2xSsE3Cbh99l8ez76xReAEdpRN3quphl9BHpwf5ZyI4HL8D7vTHQ+xYQVbDoLEcW3Z4Os2F7UIUQCng==}
     dev: true
 
-  /@sveltejs/adapter-vercel/1.0.0-next.71:
-    resolution: {integrity: sha512-Tj8za7fMXheaiB6hNqv61jr/AmAUm+G8huoY1cIvtSqqBHzGmiZH+GFK1Tq/e8e0XR2Xb/ZpZCQSyrFLU2grIQ==}
+  /@sveltejs/adapter-vercel/1.0.0-next.72:
+    resolution: {integrity: sha512-oNs8FQaYC2NnwDcvX/jc9MDNqXc9HxwGPQNkd+1vBpFVWZl9mShQgCcOMzfTOIH0ka984jYNa0ZawYYHex79xg==}
     dependencies:
       '@vercel/nft': 0.22.0
       esbuild: 0.14.54
