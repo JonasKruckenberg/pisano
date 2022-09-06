@@ -2,7 +2,7 @@
 	"name": "pisano",
 	"version": "0.0.1",
 	"type": "module",
-	"packageManager": "pnpm@7.9.5",
+	"packageManager": "pnpm@7.11.0",
 	"scripts": {
 		"dev": "tauri dev",
 		"build": "tauri build",
@@ -15,22 +15,22 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
-		"@sveltejs/adapter-static": "1.0.0-next.41",
-		"@sveltejs/kit": "1.0.0-next.463",
+		"@sveltejs/adapter-static": "1.0.0-next.42",
+		"@sveltejs/kit": "1.0.0-next.472",
 		"@tauri-apps/cli": "1.0.5",
-		"@typescript-eslint/eslint-plugin": "5.36.1",
-		"@typescript-eslint/parser": "5.36.1",
+		"@typescript-eslint/eslint-plugin": "5.36.2",
+		"@typescript-eslint/parser": "5.36.2",
 		"eslint": "8.23.0",
 		"eslint-config-prettier": "8.5.0",
 		"eslint-plugin-svelte3": "4.0.0",
 		"prettier": "2.7.1",
 		"prettier-plugin-svelte": "2.7.0",
-		"svelte": "3.49.0",
+		"svelte": "3.50.0",
 		"svelte-check": "2.9.0",
 		"svelte-preprocess": "4.10.7",
 		"tslib": "2.4.0",
 		"typescript": "4.8.2",
-		"vite": "3.1.0-beta.1"
+		"vite": "3.1.0"
 	},
 	"dependencies": {
 		"@tauri-apps/api": "1.0.2"
