@@ -6,7 +6,7 @@
 mod circle_plot;
 pub mod sequences;
 
-use tauri::{TitleBarStyle, WindowBuilder};
+use tauri::WindowBuilder;
 use url::Url;
 
 #[tauri::command]
@@ -21,13 +21,20 @@ fn main() {
     tauri::Builder::default()
         .invoke_handler(tauri::generate_handler![save_plot])
         .setup(|app| {
-            WindowBuilder::new(app, "label", tauri::WindowUrl::App("index.html".into()))
+            let mut win = WindowBuilder::new(app, "label", tauri::WindowUrl::App("index.html".into()))
                 .inner_size(1200.0, 800.0)
                 .visible(false)
                 .title("")
-                .hidden_title(true)
-                .title_bar_style(TitleBarStyle::Overlay)
-                .build()?;
+                .hidden_title(true);
+
+            #[cfg(target_os = "macos")]
+            {
+                use tauri::TitleBarStyle;
+                
+                win = win.title_bar_style(TitleBarStyle::Overlay);
+            }
+               
+            win.build()?;
 
             Ok(())
         })
