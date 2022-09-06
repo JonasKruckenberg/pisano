@@ -21,22 +21,20 @@ fn main() {
     tauri::Builder::default()
         .invoke_handler(tauri::generate_handler![save_plot])
         .setup(|app| {
-            let mut win =
-                WindowBuilder::new(app, "label", tauri::WindowUrl::App("index.html".into()))
-                    .inner_size(1200.0, 800.0)
-                    .visible(false)
-                    .title("");
+            let win = WindowBuilder::new(app, "label", tauri::WindowUrl::App("index.html".into()))
+                .inner_size(1200.0, 800.0)
+                .visible(false)
+                .title("");
 
-            #[cfg(target_os = "macos")]
-            {
+            if cfg!(target_os = "macos") {
                 use tauri::TitleBarStyle;
 
-                win = win
+                win.hidden_title(true)
                     .title_bar_style(TitleBarStyle::Overlay)
-                    .hidden_title(true);
+                    .build()?;
+            } else {
+                win.build()?;
             }
-
-            win.build()?;
 
             Ok(())
         })
