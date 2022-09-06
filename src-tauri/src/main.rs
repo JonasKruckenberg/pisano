@@ -26,13 +26,17 @@ fn main() {
                 .visible(false)
                 .title("");
 
-            if cfg!(target_os = "macos") {
+            #[cfg(target_os = "macos")]
+            {
                 use tauri::TitleBarStyle;
 
                 win.hidden_title(true)
                     .title_bar_style(TitleBarStyle::Overlay)
                     .build()?;
-            } else {
+            }
+
+            #[cfg(not(target_os = "macos"))]
+            {
                 win.build()?;
             }
 
