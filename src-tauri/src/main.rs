@@ -6,7 +6,7 @@
 mod circle_plot;
 pub mod sequences;
 
-use tauri::{WindowBuilder, TitleBarStyle};
+use tauri::{TitleBarStyle, WindowBuilder};
 use url::Url;
 
 #[tauri::command]
