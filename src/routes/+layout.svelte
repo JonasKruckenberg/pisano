@@ -10,7 +10,7 @@
 			win.show();
 		});
 
-		locale.set(navigator.language)
+		locale.set(navigator.language);
 	}
 </script>
 
