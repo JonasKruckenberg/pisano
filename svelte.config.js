@@ -8,11 +8,7 @@ const config = {
 	preprocess: preprocess(),
 
 	kit: {
-		adapter: adapter(),
-		prerender: {
-			// This can be false if you're using a fallback (i.e. SPA mode)
-			default: true
-		}
+		adapter: adapter()
 	}
 };
 
