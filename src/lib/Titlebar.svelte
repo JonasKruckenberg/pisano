@@ -1,29 +1,28 @@
 <script lang="ts">
 	import { withBoundingCircle } from '../stores/with-bounding-circle';
 	import { sequence, SequenceName } from '../stores/sequence';
+	import { t } from '$lib/i18n';
 </script>
 
 <header data-tauri-drag-region>
-	<!-- Leading edge -->
 	<div style="grid-area: info;" class="vstack">
-		<span style="font-weight: bold;">All </span>
-		<!-- <span>{Intl.NumberFormat().format($icons.length)} Symbols</span> -->
+		<span style="font-weight: bold;">Pisano</span>
 	</div>
 
 	<label style="grid-area: bounding-circle;">
-		With bounding circle
+		{$t('titlebar.with_bounding_circle')}
 		<input type="checkbox" bind:checked={$withBoundingCircle} />
 	</label>
 
 	<label style="grid-area: sequence;">
 		<select bind:value={$sequence}>
-			<option value={SequenceName.Fibonacci} default>Fibonacci numbers</option>
-			<option value={SequenceName.Primes}>Prime numbers</option>
-			<option value={SequenceName.Lucas}>Lucas numbers</option>
-			<option value={SequenceName.Ramanujan}>Ramanujan tau function</option>
-			<option value={SequenceName.SHC}>Superior highly composite numbers</option>
-			<option value={SequenceName.Pronic}>Pronic numbers</option>
-			<option value={SequenceName.Composite}>Composite numbers</option>
+			<option value={SequenceName.Fibonacci} default>{$t('titlebar.seq.fibonacci')}</option>
+			<option value={SequenceName.Primes}>{$t('titlebar.seq.primes')}s</option>
+			<option value={SequenceName.Lucas}>{$t('titlebar.seq.lucas')}</option>
+			<option value={SequenceName.Ramanujan}>{$t('titlebar.seq.ramanujan')}</option>
+			<option value={SequenceName.SHC}>{$t('titlebar.seq.shc')}</option>
+			<option value={SequenceName.Pronic}>{$t('titlebar.seq.pronic')}</option>
+			<option value={SequenceName.Composite}>{$t('titlebar.seq.composite')}</option>
 		</select>
 	</label>
 </header>

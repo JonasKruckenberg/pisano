@@ -1,0 +1,12 @@
+{
+	"with_bounding_circle": "Bounding Circle",
+	"seq": {
+		"fibonacci": "Fibonacci Numbers",
+		"primes": "Prime Numbers",
+		"lucas": "Lucas Numbers",
+		"ramanujan": "Ramanujan Tau Function",
+		"shc": "Superior Highly Composite Numbers",
+		"pronic": "Pronic Numbers",
+		"composite": "Composite Numbers"
+	}
+}

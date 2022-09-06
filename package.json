@@ -33,6 +33,7 @@
 		"vite": "3.1.0"
 	},
 	"dependencies": {
-		"@tauri-apps/api": "1.0.2"
+		"@tauri-apps/api": "1.0.2",
+		"sveltekit-i18n": "^2.2.2"
 	}
 }

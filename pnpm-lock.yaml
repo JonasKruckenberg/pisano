@@ -16,12 +16,14 @@ specifiers:
   svelte: 3.50.0
   svelte-check: 2.9.0
   svelte-preprocess: 4.10.7
+  sveltekit-i18n: ^2.2.2
   tslib: 2.4.0
   typescript: 4.8.2
   vite: 3.1.0
 
 dependencies:
   '@tauri-apps/api': 1.0.2
+  sveltekit-i18n: 2.2.2_svelte@3.50.0
 
 devDependencies:
   '@sveltejs/adapter-auto': 1.0.0-next.71
@@ -270,6 +272,20 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@sveltekit-i18n/base/1.2.1_svelte@3.50.0:
+    resolution: {integrity: sha512-F8gqG2+KAOeT0o2wYlUrW3TRCX7zaD7rBy/1CEVNw0irfw9TgFf/ODmhubkHHT3+6Zk+SMz8RNgeuffBfAMbJw==}
+    peerDependencies:
+      svelte: ^3.x
+    dependencies:
+      svelte: 3.50.0
+    optionalDependencies:
+      '@sveltekit-i18n/parser-default': 1.0.3
+    dev: false
+
+  /@sveltekit-i18n/parser-default/1.0.3:
+    resolution: {integrity: sha512-HheveklTjp3hxpYQhoHfyA6B4bQaUeSV5MQf2usIv/58UF2jY/YqhCAWj9bDBjufbuZc5pSz4BXvdX3WVT+viA==}
+    dev: false
 
   /@tauri-apps/api/1.0.2:
     resolution: {integrity: sha512-yuNW0oeJ1/ZA7wNF1KgxhHrSu5viPVzY/UgUczzN5ptLM8dH15Juy5rEGkoHfeXGju90Y/l22hi3BtIrp/za+w==}
@@ -2278,7 +2294,16 @@ packages:
   /svelte/3.50.0:
     resolution: {integrity: sha512-zXeOUDS7+85i+RxLN+0iB6PMbGH7OhEgjETcD1fD8ZrhuhNFxYxYEHU41xuhkHIulJavcu3PKbPyuCrBxdxskQ==}
     engines: {node: '>= 8'}
-    dev: true
+
+  /sveltekit-i18n/2.2.2_svelte@3.50.0:
+    resolution: {integrity: sha512-6eygICleGCSL7elY7A3trF8XUhV+mlW56ZSoD0UUKXlw+Y6u0MTTHDq48u1LyY73SfnlbPHXgTarhTjZ0BvUKA==}
+    peerDependencies:
+      svelte: ^3.x
+    dependencies:
+      '@sveltekit-i18n/base': 1.2.1_svelte@3.50.0
+      '@sveltekit-i18n/parser-default': 1.0.3
+      svelte: 3.50.0
+    dev: false
 
   /tar/6.1.11:
     resolution: {integrity: sha512-an/KZQzQUkZCkuoAA64hM92X0Urb6VpRhAFllDzz44U2mcD5scmT3zBc4VgVpkugF580+DQn8eAFSyoQt0tznA==}

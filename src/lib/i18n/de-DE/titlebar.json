@@ -1,0 +1,12 @@
+{
+	"with_bounding_circle": "Außenkreis",
+	"seq": {
+		"fibonacci": "Fibonacci-Zahlen",
+		"primes": "Primzahlen",
+		"lucas": "Lucas-Zahlen",
+		"ramanujan": "Ramanujansche tau-Funktion",
+		"shc": "Höhere hochzusammengesetzte Zahlen",
+		"pronic": "Rechteckzahlen",
+		"composite": "Zusammengesetzte Zahlen"
+	}
+}
