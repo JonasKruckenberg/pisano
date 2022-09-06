@@ -124,7 +124,7 @@ impl TryFrom<Url> for Plot {
 
         let sequence_name: Sequence = parameters
             .get("sequence")
-            .map(|v| serde_json::from_str(&v))
+            .map(|v| serde_json::from_str(v))
             .unwrap()
             .unwrap();
 
