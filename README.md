@@ -24,8 +24,9 @@ $$ 0, 1, 1, 2, 0, 2, 2, 1, 0, 1, 1, 2, 0, 2, 2, 1, 0, 1, 1, 2, 0, 2, 2, 1, 0, $$
 
 If you then take $n$ equally spaced points on a circle a draw lines between them according to the pisano period you get this visualisation:
 
-<img src="./circle-plot-fib-mod-3.svg" width="300">
-
+<img src="./circle-plot-fib-mod-3-light.svg#gh-light-mode-only" width="300">
+<img src="./circle-plot-fib-mod-3-dark.svg#gh-dark-mode-only" width="300">
+  
 ## Disclaimer
 
 I made this while I was supposed to work on a talk. **This is a procrastination project!** There is much work left here, including bug fixes, adding new sequences, adding new visualizations etc. but let's hope for my talk's sake I will not implement these features! If you are interested in adding these, feel free to open a PR and I will be happy to merge it!
