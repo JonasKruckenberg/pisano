@@ -20,7 +20,7 @@ serde = { version = "1.0", features = ["derive"] }
 tauri = { git = "https://github.com/tauri-apps/tauri", branch = "macos-transparent-titlebar", features = ["window-maximize", "window-show", "window-start-dragging", "window-unmaximize"] }
 svg = "0.10.0"
 url = "2.3.1"
-percent-encoding = "2.1.0"
+percent-encoding = "2.2.0"
 serde_repr = "0.1.9"
 
 [features]
