@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@sveltejs/adapter-auto': next
   '@sveltejs/adapter-static': 1.0.0-next.42
-  '@sveltejs/kit': 1.0.0-next.478
+  '@sveltejs/kit': 1.0.0-next.479
   '@tauri-apps/api': 1.0.2
   '@tauri-apps/cli': 1.0.5
   '@typescript-eslint/eslint-plugin': 5.36.2
@@ -26,9 +26,9 @@ dependencies:
   sveltekit-i18n: 2.2.2_svelte@3.50.1
 
 devDependencies:
-  '@sveltejs/adapter-auto': 1.0.0-next.71
+  '@sveltejs/adapter-auto': 1.0.0-next.72
   '@sveltejs/adapter-static': 1.0.0-next.42
-  '@sveltejs/kit': 1.0.0-next.478_svelte@3.50.1+vite@3.1.0
+  '@sveltejs/kit': 1.0.0-next.479_svelte@3.50.1+vite@3.1.0
   '@tauri-apps/cli': 1.0.5
   '@typescript-eslint/eslint-plugin': 5.36.2_2l2r3i3lm6jysqd4ac3ql4n2mm
   '@typescript-eslint/parser': 5.36.2_itqs5654cmlnjraw6gjzqacppi
@@ -180,12 +180,12 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@sveltejs/adapter-auto/1.0.0-next.71:
-    resolution: {integrity: sha512-Qsl82HcehWJbZztXgmU/nTPDeeIaB4jrOQpSvy3Pi8octs+rEf/CO87Wk06EP+M/zUzEHDNENMOx0DgWuHpj7Q==}
+  /@sveltejs/adapter-auto/1.0.0-next.72:
+    resolution: {integrity: sha512-SisfQ6adHkkmm6ANVq9V9hemowl9mSVQd+XoNDAhjgf1DtCdJEgpkdJDZ7xq7RB0lsTZTSiAp7c/LlV4lCSTMA==}
     dependencies:
       '@sveltejs/adapter-cloudflare': 1.0.0-next.32
       '@sveltejs/adapter-netlify': 1.0.0-next.76
-      '@sveltejs/adapter-vercel': 1.0.0-next.72
+      '@sveltejs/adapter-vercel': 1.0.0-next.73
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -212,8 +212,8 @@ packages:
     resolution: {integrity: sha512-BLMQY8zfUibex5FE3zkMXdkW4l/n+1tecUrCxmmO5jc8vEuZc41VQdmQtDifX80Bf1pCG3RH7151tJ+jqte2lg==}
     dev: true
 
-  /@sveltejs/adapter-vercel/1.0.0-next.72:
-    resolution: {integrity: sha512-oNs8FQaYC2NnwDcvX/jc9MDNqXc9HxwGPQNkd+1vBpFVWZl9mShQgCcOMzfTOIH0ka984jYNa0ZawYYHex79xg==}
+  /@sveltejs/adapter-vercel/1.0.0-next.73:
+    resolution: {integrity: sha512-wYm80tDSkwa9YfXHCHqMFMHmGYsQjVWj2oLbQdijQ2k8dnQPq908Pla3IES1cLwtT+fIMbZyh3Xly7mt06FwJg==}
     dependencies:
       '@vercel/nft': 0.22.1
       esbuild: 0.14.54
@@ -222,8 +222,8 @@ packages:
       - supports-color
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.478_svelte@3.50.1+vite@3.1.0:
-    resolution: {integrity: sha512-XnsPQg1aQpfgqU3FvuLrfY7HwwQpq82EbW4Y5FybEshsnJkeGGWv4qQUKpR88E0mu8yHqGh0MVZpsbMSteoa/w==}
+  /@sveltejs/kit/1.0.0-next.479_svelte@3.50.1+vite@3.1.0:
+    resolution: {integrity: sha512-VE6D6ee/U8grO0pm+aYo7ErMEqS3dzM27gUDxCIXO5//wKCuizrH6Oj3mE+oPQvJhIvoNNeaugq2eFwUxIB7FA==}
     engines: {node: '>=16.14'}
     hasBin: true
     requiresBuild: true
