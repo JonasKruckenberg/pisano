@@ -1,5 +1,0 @@
----
-'pisano': minor
----
-
-Initial release
