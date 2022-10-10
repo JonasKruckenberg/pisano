@@ -15,7 +15,7 @@ specifiers:
   prettier: 2.7.1
   prettier-plugin-svelte: 2.8.0
   svelte: 3.50.1
-  svelte-check: 2.9.1
+  svelte-check: 2.9.2
   svelte-preprocess: 4.10.7
   sveltekit-i18n: 2.2.2
   tslib: 2.4.0
@@ -27,7 +27,7 @@ dependencies:
   sveltekit-i18n: 2.2.2_svelte@3.50.1
 
 devDependencies:
-  '@sveltejs/adapter-auto': 1.0.0-next.80
+  '@sveltejs/adapter-auto': 1.0.0-next.81
   '@sveltejs/adapter-static': 1.0.0-next.44
   '@sveltejs/kit': 1.0.0-next.511_svelte@3.50.1+vite@3.1.7
   '@tauri-apps/cli': 1.1.1
@@ -40,7 +40,7 @@ devDependencies:
   prettier: 2.7.1
   prettier-plugin-svelte: 2.8.0_nk6d2fkgcllkkdynqbuearcure
   svelte: 3.50.1
-  svelte-check: 2.9.1_svelte@3.50.1
+  svelte-check: 2.9.2_svelte@3.50.1
   svelte-preprocess: 4.10.7_qy6w2iv5hnh55blsjuu7uihyzm
   tslib: 2.4.0
   typescript: 4.8.4
@@ -267,11 +267,11 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@sveltejs/adapter-auto/1.0.0-next.80:
-    resolution: {integrity: sha512-352WoZr9fQgxJqgNENvxRr2gsA+wTF6V9AVaQaaatDYd3RVEBaXTYOOalFaRLSa25mRUJaLYP2aaliqczMl23g==}
+  /@sveltejs/adapter-auto/1.0.0-next.81:
+    resolution: {integrity: sha512-q+0Rh2upU7i3m0fVi/CHrkt+BbTR7bkQ2OoVTVMKwSqrBenr6utPB/7y8tyRrZ21gzUihMSbeFpzbpmzVOI+2g==}
     dependencies:
       '@sveltejs/adapter-cloudflare': 1.0.0-next.38
-      '@sveltejs/adapter-netlify': 1.0.0-next.78
+      '@sveltejs/adapter-netlify': 1.0.0-next.79
       '@sveltejs/adapter-vercel': 1.0.0-next.77
     transitivePeerDependencies:
       - encoding
@@ -286,8 +286,8 @@ packages:
       worktop: 0.8.0-next.14
     dev: true
 
-  /@sveltejs/adapter-netlify/1.0.0-next.78:
-    resolution: {integrity: sha512-Yyn/j/0QcLK3Db442ducLUZmyvkO74j7Gdcwu9xN0fQN3kBlCJP9Itx5o4SySrPFGc4Q8cLJ5ELNg+mWduLBAA==}
+  /@sveltejs/adapter-netlify/1.0.0-next.79:
+    resolution: {integrity: sha512-XaihONVwUeXVVt9f2xcFgRExfG8jWKPkyqi715kzPbrgpqH3zaRgLJM2ABEGQ3g2MEn+6op+Z2olIWhM+RA0Cg==}
     dependencies:
       '@iarna/toml': 2.2.5
       esbuild: 0.15.10
@@ -2477,8 +2477,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /svelte-check/2.9.1_svelte@3.50.1:
-    resolution: {integrity: sha512-+BFPsj6irZ+t2pVSVo//2Ic1mI3A52xCwbkSTVhTqYZqgawcyZd9pYZoEac3fIWbEeTyCb5X82ORKI/gjn+P7A==}
+  /svelte-check/2.9.2_svelte@3.50.1:
+    resolution: {integrity: sha512-DRi8HhnCiqiGR2YF9ervPGvtoYrheE09cXieCTEqeTPOTJzfoa54Py8rovIBv4bH4n5HgZYIyTQ3DDLHQLl2uQ==}
     hasBin: true
     peerDependencies:
       svelte: ^3.24.0
