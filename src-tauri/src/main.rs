@@ -36,9 +36,7 @@ fn main() {
             }
 
             #[cfg(not(target_os = "macos"))]
-            {
-                win.build()?;
-            }
+            win.build()?;
 
             Ok(())
         })
