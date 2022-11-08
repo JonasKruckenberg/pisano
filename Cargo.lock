@@ -189,12 +189,11 @@ dependencies = [
 
 [[package]]
 name = "cargo_toml"
-version = "0.11.8"
+version = "0.13.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e72c3ff59e3b7d24630206bb63a73af65da4ed5df1f76ee84dfafb9fee2ba60e"
+checksum = "aa0e3586af56b3bfa51fca452bd56e8dbbbd5d8d81cbf0b7e4e35b695b537eb8"
 dependencies = [
  "serde",
- "serde_derive",
  "toml",
 ]
 
@@ -2398,7 +2397,7 @@ dependencies = [
  "tauri-macros",
  "tauri-runtime",
  "tauri-runtime-wry",
- "tauri-utils 1.1.1 (git+https://github.com/tauri-apps/tauri)",
+ "tauri-utils 1.1.1",
  "tempfile",
  "thiserror",
  "tokio",
@@ -2411,9 +2410,9 @@ dependencies = [
 
 [[package]]
 name = "tauri-build"
-version = "1.1.1"
+version = "1.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0991fb306849897439dbd4a72e4cbed2413e2eb26cb4b3ba220b94edba8b4b88"
+checksum = "ef796f49abc98e6de0abe1b655120addc9d82363d8fc2304e71a4177c25e783c"
 dependencies = [
  "anyhow",
  "cargo_toml",
@@ -2421,7 +2420,7 @@ dependencies = [
  "json-patch",
  "semver 1.0.14",
  "serde_json",
- "tauri-utils 1.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "tauri-utils 1.2.0",
  "winres",
 ]
 
@@ -2442,7 +2441,7 @@ dependencies = [
  "serde",
  "serde_json",
  "sha2",
- "tauri-utils 1.1.1 (git+https://github.com/tauri-apps/tauri)",
+ "tauri-utils 1.1.1",
  "thiserror",
  "time",
  "uuid 1.2.1",
@@ -2459,7 +2458,7 @@ dependencies = [
  "quote",
  "syn",
  "tauri-codegen",
- "tauri-utils 1.1.1 (git+https://github.com/tauri-apps/tauri)",
+ "tauri-utils 1.1.1",
 ]
 
 [[package]]
@@ -2474,7 +2473,7 @@ dependencies = [
  "raw-window-handle",
  "serde",
  "serde_json",
- "tauri-utils 1.1.1 (git+https://github.com/tauri-apps/tauri)",
+ "tauri-utils 1.1.1",
  "thiserror",
  "uuid 1.2.1",
  "webview2-com",
@@ -2492,7 +2491,7 @@ dependencies = [
  "rand 0.8.5",
  "raw-window-handle",
  "tauri-runtime",
- "tauri-utils 1.1.1 (git+https://github.com/tauri-apps/tauri)",
+ "tauri-utils 1.1.1",
  "uuid 1.2.1",
  "webkit2gtk",
  "webview2-com",
@@ -2503,13 +2502,14 @@ dependencies = [
 [[package]]
 name = "tauri-utils"
 version = "1.1.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1e8fdae6f29cef959809a3c3afef510c5b715a446a597ab8b791497585363f39"
+source = "git+https://github.com/tauri-apps/tauri#4036e15f5af933bdc0d0913508b5103958afc143"
 dependencies = [
+ "brotli",
  "ctor",
  "glob",
  "heck 0.4.0",
  "html5ever",
+ "infer",
  "json-patch",
  "kuchiki",
  "memchr",
@@ -2528,10 +2528,10 @@ dependencies = [
 
 [[package]]
 name = "tauri-utils"
-version = "1.1.1"
-source = "git+https://github.com/tauri-apps/tauri#4036e15f5af933bdc0d0913508b5103958afc143"
+version = "1.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d64c9a09ba1538b8e67ae8c78c10904f36ce38d364bf7f089ec807032a826b02"
 dependencies = [
- "brotli",
  "ctor",
  "glob",
  "heck 0.4.0",
