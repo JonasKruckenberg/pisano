@@ -2,7 +2,7 @@
 	"name": "pisano",
 	"version": "0.0.1",
 	"type": "module",
-	"packageManager": "pnpm@7.17.1",
+	"packageManager": "pnpm@7.18.0",
 	"scripts": {
 		"dev": "tauri dev",
 		"build": "tauri build",
