@@ -78,6 +78,8 @@ jobs:
       - uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAURI_KEY_PASSWORD: '${{ secrets.TAURI_KEY_PASSWORD }}'
+          TAURI_PRIVATE_KEY: '${{ secrets.TAURI_PRIVATE_KEY }}'
         with:
           tagName: nightly__VERSION__ # the action automatically replaces \_\_VERSION\_\_ with the app version
           releaseName: 'Pisano Nightly v__VERSION__'
@@ -111,8 +113,7 @@ jobs:
       #     # APPLE_CERTIFICATE_PASSWORD:
       #     # '${{ secrets.APPLE_CERTIFICATE_PASSWORD }}'
       #     # APPLE_SIGNING_IDENTITY: '${{ secrets.APPLE_SIGNING_IDENTITY }}'
-      #     # TAURI_KEY_PASSWORD: '${{ secrets.TAURI_KEY_PASSWORD }}'
-      #     # TAURI_PRIVATE_KEY: '${{ secrets.TAURI_PRIVATE_KEY }}'
+
       #   with:
       #     target: ${{ matrix.config.rust_target }}
       #     args: --verbose
