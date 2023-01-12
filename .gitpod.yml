@@ -2,7 +2,7 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - init: pnpm install && cd src-tauri && cargo build
+  - init: pnpm install && cd src-tauri && cargo build --no-default-features
     command: "pnpm tauri dev"
 
 ports:
