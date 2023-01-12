@@ -10,8 +10,7 @@ RUN apt update && \
         libsoup2.4-dev \
         libjavascriptcoregtk-4.0-dev \
         libayatana-appindicator3-dev \
-        librsvg2-dev && \
-    npm i -g yarn && \
-#    cd /workspace/gitpod-test/crates/test-app && yarn && \
+        librsvg2-dev \
+        at-spi2-core && \
     rm -rf /var/lib/{apt,dpkg,cache,log}/ /tmp/* /var/tmp/*
 USER gitpod

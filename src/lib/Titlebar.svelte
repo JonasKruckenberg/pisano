@@ -17,7 +17,7 @@
 	<label style="grid-area: sequence;">
 		<select bind:value={$sequence}>
 			<option value={SequenceName.Fibonacci} default>{$t('titlebar.seq.fibonacci')}</option>
-			<option value={SequenceName.Primes}>{$t('titlebar.seq.primes')}s</option>
+			<option value={SequenceName.Primes}>{$t('titlebar.seq.primes')}</option>
 			<option value={SequenceName.Lucas}>{$t('titlebar.seq.lucas')}</option>
 			<option value={SequenceName.Ramanujan}>{$t('titlebar.seq.ramanujan')}</option>
 			<option value={SequenceName.SHC}>{$t('titlebar.seq.shc')}</option>
