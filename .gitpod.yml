@@ -2,8 +2,8 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - init: yarn install && cd src-tauri && cargo build
-    command: "yarn tauri dev"
+  - init: pnpm install && cd src-tauri && cargo build
+    command: "pnpm tauri dev"
 
 ports:
   - name: VNC UI
