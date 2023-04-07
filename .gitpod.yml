@@ -3,7 +3,7 @@ image:
 
 tasks:
   - init: pnpm install && cd src-tauri && cargo build --no-default-features
-    command: "pnpm tauri dev"
+    command: 'pnpm tauri dev'
 
 ports:
   - name: VNC UI
