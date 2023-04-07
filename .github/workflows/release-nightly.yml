@@ -49,7 +49,7 @@ jobs:
         with:
           targets: ${{ matrix.config.rust_target }}
 
-      - uses: Swatinem/rust-cache@v1
+      - uses: Swatinem/rust-cache@v2
         with:
           key: ${{ matrix.config.rust_target }}
 
@@ -90,7 +90,7 @@ jobs:
       #     node scripts/update-cargo-toml.mjs ./desktop/app/Cargo.toml ${{
       #     needs.get-version.outputs.version }}
 
-      - uses: JonasKruckenberg/tauri-build@v1.2.2
+      - uses: JonasKruckenberg/tauri-build@v1.2.3
         id: tauri_build
         env:
           VERSION: ${{ needs.get-version.outputs.version }}
