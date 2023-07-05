@@ -19,7 +19,7 @@ tauri = { version = "1.4.1", features = ["window-maximize", "window-show", "wind
 svg = "0.13.1"
 url = "2.4.0"
 percent-encoding = "2.3.0"
-serde_repr = "0.1.13"
+serde_repr = "0.1.14"
 
 [features]
 default = [ "custom-protocol" ]
